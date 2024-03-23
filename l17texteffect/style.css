@@ -48,6 +48,7 @@ em{
 
 	animation-name: textlighting;
 	animation-duration: 0.8s;
+	animation-fill-mode: backwards;
 
 }
 
