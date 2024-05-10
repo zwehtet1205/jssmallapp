@@ -1,0 +1,67 @@
+body{
+    font-family: sans-serif;
+    /*	background: url(https://i.pinimg.com/564x/5c/25/80/5c2580d3b869d0bbd45e1ee5989a3fd8.jpg);*/
+    background: url(https://i.pinimg.com/564x/59/6b/58/596b58b7da68d08cd4789f02c1e78b86.jpg);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right bottom;
+
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+.form-control,.btn{
+    border-style: solid;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.btn{
+    background-color: skyblue;
+    color: #fff;
+    border: none;
+}
+
+.btn:hover{
+    background-color: steelblue;
+}
+.gameform span{
+    display: block;
+    margin-top: 5px;
+}
+
+.tryagain{
+    background: url(https://i.pinimg.com/236x/56/68/c1/5668c1086a57a6677e88957c2baeb728.jpg);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right bottom;
+}
+
+.win{
+    background: url(https://i.pinimg.com/564x/5c/25/80/5c2580d3b869d0bbd45e1ee5989a3fd8.jpg);
+    background-size: 800px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right bottom;
+}
+
+.lose{
+    
+    background: url(https://i.pinimg.com/236x/8d/7d/7c/8d7d7c177482726892839f32aa60dffb.jpg);
+    background-size: 400px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right bottom;
+}
+
+.mic-btn{
+    margin: 10px 0;
+}

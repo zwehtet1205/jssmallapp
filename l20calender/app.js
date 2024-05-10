@@ -15,7 +15,7 @@ let month,year;
 
 window.addEventListener("load",function(){
 
-    console.log("Hay i am working");
+    // console.log("Hay i am working");
 
     let getday = new Date();
     month = getday.getMonth();
@@ -46,9 +46,41 @@ function initmonths(){
         newdiv.textContent = months[x];
         newdiv.classList.add("dropdown-item");
 
+        // newdiv.addEventListener("click",function(){
+        //     // Method 1
+        //     // console.log(x);
+        //     // month = x;
+        //     // getcurrentmonth.textContent = months[x];
+        //     // initdays();
+
+        //     // Method 2
+        //     // console.log(this);
+        //     month = months.indexOf(this.textContent);
+        //     getcurrentmonth.textContent = months[month];
+        //     initdays();
+
+        // });
+
+        newdiv.onclick = updatedays(x);
+
         // console.log(newdiv);
         getuimonths.appendChild(newdiv);
     }
+}
+
+function updatedays(idx){
+    // console.log(idx);
+
+    let selectmonth = idx;
+
+    return function(){
+        month = selectmonth;
+        // console.log(month);
+
+        getcurrentmonth.textContent = months[month];
+        initdays();
+    }
+
 }
 
 function inityears(){
@@ -62,9 +94,67 @@ function inityears(){
         newdiv.textContent = x;
         newdiv.classList.add("dropdown-item");
 
+        // newdiv.addEventListener("click",function(){
+        //     // method 1 
+        //     // console.log(x);
+        //     year = x;
+        //     getcuryear.textContent = year;
+
+        //     // method 2
+        //     //  console.log(this);
+        //     // year = this.textContent;
+        //     // getcuryear.textContent = year;
+
+        //     initdays();
+
+        // });
+
+
+        // newdiv.onclick = updateyears(x);
+
+        // => Method 4 
+        // newdiv.onclick = ()=>{
+        //     // console.log(x); 
+        //     year = x;
+        //     getcuryear.textContent = year;
+        //     initdays();
+        // }
+
+        // => Method 5
+        newdiv.onclick = (function(){
+           // console.log(x);
+
+            let selectyear = x;
+
+            return function(){
+                year = selectyear;
+                // console.log(year);
+
+                getcuryear.textContent = year;
+                initdays();
+            }
+        })();
+
+
+
         // console.log(newdiv);
         getuiyears.appendChild(newdiv);
     }
+}
+
+function updateyears(idx){
+    // console.log(idx);
+
+    let selectyear = idx;
+
+    return function(){
+        year = selectyear;
+        // console.log(year);
+
+        getcuryear.textContent = year;
+        initdays();
+    }
+
 }
 
 function initdays(){
@@ -83,7 +173,7 @@ function initdays(){
 
         let newlabel = document.createElement('label');
         newlabel.className = "day blank";
-        console.log(newlabel); 
+        // console.log(newlabel); 
         
         getcaldays.appendChild(newlabel);
 
